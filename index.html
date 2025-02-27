@@ -11,16 +11,24 @@
         <h1>Be Unique Be You</h1>
     </header>
 
-    <section class="product">
-        <img src="shirt.jpg" alt="Baju Unik">
-        <h2>Baju Eksklusif</h2>
-        <p>Harga: RM50</p>
-        <button onclick="document.getElementById('order-form').style.display='block'">Tempah Sekarang</button>
+    <section class="container">
+        <div class="product">
+            <img src="shirt.jpg" alt="Baju Eksklusif">
+            <h2>Baju Eksklusif</h2>
+            <p>Harga: RM50</p>
+            <button class="order-btn" onclick="openOrderForm()">Tempah Sekarang</button>
+        </div>
+
+        <div class="whatsapp">
+            <a href="https://wa.me/601121719785" target="_blank">
+                <button class="whatsapp-btn">Hubungi di WhatsApp</button>
+            </a>
+        </div>
     </section>
 
     <div id="order-form" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="document.getElementById('order-form').style.display='none'">&times;</span>
+            <span class="close" onclick="closeOrderForm()">&times;</span>
             <h2>Borang Tempahan</h2>
             <form action="https://formspree.io/f/mnqkroql" method="POST">
                 <label for="name">Nama:</label>
@@ -37,7 +45,7 @@
                     <option value="XL">XL</option>
                 </select>
 
-                <button type="submit">Hantar Tempahan</button>
+                <button type="submit" class="submit-btn">Hantar Tempahan</button>
             </form>
         </div>
     </div>

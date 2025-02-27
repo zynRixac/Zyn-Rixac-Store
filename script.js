@@ -1,8 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("order-form");
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    };
-});
+function openOrderForm() {
+    document.getElementById("order-form").style.display = "block";
+}
+
+function closeOrderForm() {
+    document.getElementById("order-form").style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target === document.getElementById("order-form")) {
+        closeOrderForm();
+    }
+};
