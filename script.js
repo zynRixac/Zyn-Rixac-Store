@@ -9,5 +9,5 @@ function closeOrderForm() {
 window.onclick = function(event) {
     if (event.target === document.getElementById("order-form")) {
         closeOrderForm();
-    }
+    }
 };
