@@ -7,22 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Be Unique Be You</h1>
+        <nav>
+            <ul>
+                <li><a href="#baju">Baju</a></li>
+                <li><a href="#kasut">Kasut</a></li>
+                <li><a href="#seluar">Seluar</a></li>
+                <li><a href="https://wa.me/601121719785" class="whatsapp-btn">WhatsApp</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="container">
-        <div class="product">
-            <img src="shirt.jpg" alt="Baju Eksklusif">
-            <h2>Baju Eksklusif</h2>
-            <p>Harga: RM50</p>
-            <button class="order-btn" onclick="openOrderForm()">Tempah Sekarang</button>
+    <section class="products" id="baju">
+        <h2>Baju</h2>
+        <div class="product-card">
+            <img src="baju1.jpg" alt="Baju Hitam Putih">
+            <h3>Baju Unik</h3>
+            <p>RM50</p>
+            <button onclick="openOrderForm('Baju Unik')">Tempah</button>
         </div>
+    </section>
 
-        <div class="whatsapp">
-            <a href="https://wa.me/601121719785" target="_blank">
-                <button class="whatsapp-btn">Hubungi di WhatsApp</button>
-            </a>
+    <section class="products" id="kasut">
+        <h2>Kasut</h2>
+        <div class="product-card">
+            <img src="kasut1.jpg" alt="Kasut Hitam">
+            <h3>Kasut Stylish</h3>
+            <p>RM120</p>
+            <button onclick="openOrderForm('Kasut Stylish')">Tempah</button>
+        </div>
+    </section>
+
+    <section class="products" id="seluar">
+        <h2>Seluar</h2>
+        <div class="product-card">
+            <img src="seluar1.jpg" alt="Seluar Trendy">
+            <h3>Seluar Trendy</h3>
+            <p>RM80</p>
+            <button onclick="openOrderForm('Seluar Trendy')">Tempah</button>
         </div>
     </section>
 
@@ -31,29 +55,7 @@
             <span class="close" onclick="closeOrderForm()">&times;</span>
             <h2>Borang Tempahan</h2>
             <form action="https://formspree.io/f/mnqkroql" method="POST">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="item">Produk:</label>
+                <input type="text" id="item" name="item" readonly>
 
-                <label for="phone">No Telefon:</label>
-                <input type="text" id="phone" name="phone" required>
-
-                <label for="size">Saiz Baju:</label>
-                <select id="size" name="size">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-
-                <button type="submit" class="submit-btn">Hantar Tempahan</button>
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>Hak Cipta © 2025 Be Unique Be You</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <label for="name">Nama:</label
